@@ -4,6 +4,7 @@ function validar(){
     //o JS é fracamente tipada
     var login;
     var senha;
+    
     //pega o elemento
     login = document.getElementById("login").value;
     senha = document.getElementById("senha").value;
@@ -15,6 +16,15 @@ function validar(){
         alert("senha obrigatorio")
         return false;
     }else{
-        return true;
+        if(login === "senai" && senha === "123"){
+            alert("sucesso")
+            window.sessionStorage.setItem('login',login);
+            return true;
+        }else{
+            return false;
+        }
+            
     }
-}
+                    
+        
+    }
